@@ -116,3 +116,32 @@ Intense processing has about a 10-20% overhead, and in special isolate calls are
 | Async Execution | Debug   | 135                         |
 | Isolate Calls     | Release | 113                         |
 | Isolate Calls     | Debug   | 371                         |
+
+### Performance Analysis
+
+**Problem Definition**:
+The algorithm is designed to detect pitches within the frequency spectrum of string instruments 32.7 Hz to 2093.0 Hz
+
+**Algorithm**:
+- **Yin Pitch Detection**:
+  - Strategy: The primary strategy used in the Yin Pitch Detection algorithm is the Cumulative Mean Normalized Difference Function (CMNDF). It functions by identifying asymmetry in the waveform. The waveform is split into two windows, and the difference between these windows is computed and normalized for different tau values. The algorithm identifies the delay (or tau) which minimizes this difference, providing the pitch or frequency.
+  - Complexity: The algorithm typically has a linear time complexity, O(n), where n is the number of samples.
+
+**Audio Recording Configuration**:
+- **Sample Rate**: 48,000 Hz (or 48 kHz)
+- **Channels**: Mono
+- **Bit Depth**: 16 bits PCM
+- **Frame Time**: 1 second
+
+Given these configurations, the result of streaming data is approximately 93.75 KB for every 1-second frame of audio recorded.
+
+**Execution Timings on Xiaomi Redmi Note 8, worst case scenario of the algorithm**:
+
+| Configuration | Avg. Time Taken |
+|----------------------|------------|
+| Flutter Side useIsolates = true, useTopLevelFunction = true | ~113 ms |
+| Flutter Side useIsolates = false, useTopLevelFunction = true | ~111 ms |
+| Flutter Side useIsolates = false, useTopLevelFunction = false | ~113 ms |
+| Native Execution | 1 ms |
+
+In conclusion, while Flutter offers fantastic tools and capabilities for building cross-platform applications with a single codebase, there are specific scenarios, especially those requiring high-performance computations, where native implementations are irreplaceably efficient.
