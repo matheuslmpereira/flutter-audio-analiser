@@ -29,16 +29,14 @@ Dart has a single-threaded approach. While it offers "isolates" for concurrent p
 - **Challenges**:
   - Dart's single-threaded nature can pose a bottleneck for CPU-intensive tasks.
   - When data is processed by an isolate, it can be instantiated multiple times in memory. For instance, when data comes from a native module and is processed by an isolate, the data might be instantiated thrice, causing potential memory inefficiencies.
+  - Even if you define a class as a singleton in one isolate, it won't be the same instance in another isolate because of the separate memory heaps. This behavior is the same in both debug and release modes.
   
 - **Potential Solutions**:
   - For computationally intensive tasks, consider processing them natively and passing only the final result to Dart to minimize data transfer.
   - Employ efficient data structures and serialization methods to minimize memory footprint.
   - Continuously monitor memory usage during development to identify potential bottlenecks or inefficiencies.
   
-### 3. Singletons in isolates
-  Even if you define a class as a singleton in one isolate, it won't be the same instance in another isolate because of the separate memory heaps. This behavior is the same in both debug and release modes.
-  
-### 4. Understanding `async` and `await` in Dart: A Deep Dive into the Event Loop
+### 3. Understanding `async` and `await` in Dart: A Deep Dive into the Event Loop
 
 #### Event Loop and Single-threaded Model
 
@@ -78,7 +76,7 @@ For developers:
 
 4. **Careful with Blocking Operations**: It's crucial to avoid long-running synchronous tasks. Since there's a single main thread, any task that doesn't yield (with `await` or otherwise) will block the entire application, leading to unresponsiveness.
 
-### 5. Debug vs. Release Modes in Flutter
+### 4. Debug vs. Release Modes in Flutter
 
 Flutter, like many development platforms, offers different modes for building and running applications. These modes are optimized for different phases of the development cycle, from initial development and debugging to final release. Here's a breakdown of the two primary modes: Debug and Release.
 
