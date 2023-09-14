@@ -1,5 +1,7 @@
 ## Emulator Pixel 3a 34 extesion 7 arm64-v8a
 
+Following I cut some log samples of the execution in diverse contexts.
+
 #### useIsolates = false useTopLevelFunction = false
  frequency -1.0 - intensity 0.47335686156100465 taken: 50 ms
 
