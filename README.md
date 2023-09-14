@@ -82,7 +82,7 @@ For developers:
 
 Flutter, like many development platforms, offers different modes for building and running applications. These modes are optimized for different phases of the development cycle, from initial development and debugging to final release. Here's a breakdown of the two primary modes: Debug and Release.
 
-### General Overview
+#### General Overview
 
 1. **Debug Mode**:
    - **Virtual Machine (VM)**: In debug mode, Flutter runs on a VM (Dart VM). This VM allows for dynamic code updates, which means as you code and save, hot reloading becomes possible.
@@ -93,7 +93,7 @@ Flutter, like many development platforms, offers different modes for building an
    - **Ahead-of-Time Compilation (AOT)**: Flutter uses AOT compilation when building your app for release. AOT compilation converts Dart code into native machine code for the platform it's running on, resulting in a much faster execution time compared to the VM.
    - **Optimizations**: The builder also performs tree-shaking to remove unused code, ensuring the smallest possible package size. Additionally, it obfuscates the code, making it harder to reverse engineer.
 
-### Performance Testing in Debug Mode: A Tricky Affair
+#### Performance Testing in Debug Mode: A Tricky Affair
 
 When you're running your app in debug mode, you should be wary of performance measurements for several reasons:
 
