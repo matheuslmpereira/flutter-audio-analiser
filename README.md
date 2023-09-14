@@ -108,7 +108,7 @@ Sure thing. Let's group everything into a single table:
 
 ### Practical tests
 
-Intense processing has about a 10-20% overhead, and special isolate calls are massively ruined on debug.
+Intense processing has about a 10-20% overhead, and in special isolate calls are massively ruined on debug.
 
 | **Test Type** | **Mode**  | **Average Time Taken (ms)** |
 |---------------|-----------|-----------------------------|
