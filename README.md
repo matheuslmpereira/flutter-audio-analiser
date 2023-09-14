@@ -104,3 +104,15 @@ When you're running your app in debug mode, you should be wary of performance me
 Because of these differences, while you can and should fix obvious performance issues in debug mode, you should always validate and test performance in a **profile mode** or the release mode. Profile mode is a middle ground—it's closer to the release performance but with some ability to profile and analyze the app.
 
 In essence, while the debug mode offers powerful tools for development, it is not representative of the real-world performance users will experience. Always make final performance judgments using the release or profile builds.
+Sure thing. Let's group everything into a single table:
+
+### Practical tests
+
+Intense processing has about a 10-20% overhead, and special isolate calls are massively ruined on debug.
+
+| **Test Type** | **Mode**  | **Average Time Taken (ms)** |
+|---------------|-----------|-----------------------------|
+| Intense Processing | Release | 117                         |
+| Intense Processing | Debug   | 135                         |
+| Isolate Calls     | Release | 113                         |
+| Isolate Calls     | Debug   | 371                         |
