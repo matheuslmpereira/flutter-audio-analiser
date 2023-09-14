@@ -112,7 +112,7 @@ Intense processing has about a 10-20% overhead, and special isolate calls are ma
 
 | **Test Type** | **Mode**  | **Average Time Taken (ms)** |
 |---------------|-----------|-----------------------------|
-| Intense Processing | Release | 117                         |
-| Intense Processing | Debug   | 135                         |
+| Async Execution | Release | 117                         |
+| Async Execution | Debug   | 135                         |
 | Isolate Calls     | Release | 113                         |
 | Isolate Calls     | Debug   | 371                         |
