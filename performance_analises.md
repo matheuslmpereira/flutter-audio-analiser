@@ -78,3 +78,16 @@ frequency -1.0 - intensity 0.2544389732703767 taken: 112 ms
 
 <img width="778" alt="image" src="https://github.com/matheuslmpereira/flutter-audio-analiser/assets/11295011/0a6b6d5e-11f5-4990-8251-7facd930acc8">
 
+#### Native Execution
+
+requency -1.0 - intensity 0.6829975486187615 taken: 1 ms
+
+requency -1.0 - intensity 0.5616221672799621 taken: 1 ms
+
+requency -1.0 - intensity 0.5838334100058248 taken: 1 ms
+
+requency -1.0 - intensity 0.5343862280273544 taken: 1 ms
+
+requency -1.0 - intensity 0.9593678087354215 taken: 1 ms
+
+<img width="777" alt="image" src="https://github.com/matheuslmpereira/flutter-audio-analiser/assets/11295011/3d7296a4-ec0e-4219-a951-501ee4de1ef5">
