@@ -123,7 +123,7 @@ Intense processing has about a 10-20% overhead, and in special isolate calls are
 The algorithm is designed to detect pitches within the frequency spectrum of string instruments 32.7 Hz to 2093.0 Hz
 
 **Algorithm**:
-- **Yin Pitch Detection**:
+- **Yin Pitch Detection** ([review article](http://audition.ens.fr/adc/pdf/2002_JASA_YIN.pdf):
   - Strategy: The primary strategy used in the Yin Pitch Detection algorithm is the Cumulative Mean Normalized Difference Function (CMNDF). It functions by identifying asymmetry in the waveform. The waveform is split into two windows, and the difference between these windows is computed and normalized for different tau values. The algorithm identifies the delay (or tau) which minimizes this difference, providing the pitch or frequency.
   - Complexity: The algorithm typically has a linear time complexity, O(n), where n is the number of samples.
 
