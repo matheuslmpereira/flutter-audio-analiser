@@ -117,7 +117,7 @@ Intense processing has about a 10-20% overhead, and in special isolate calls are
 | Isolate Calls     | Release | 113                         |
 | Isolate Calls     | Debug   | 371                         |
 
-### Performance Analysis
+## Performance Analysis
 
 **Problem Definition**:
 The algorithm is designed to detect pitches within the frequency spectrum of string instruments 32.7 Hz to 2093.0 Hz
