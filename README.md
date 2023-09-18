@@ -106,7 +106,7 @@ Because of these differences, while you can and should fix obvious performance i
 In essence, while the debug mode offers powerful tools for development, it is not representative of the real-world performance users will experience. Always make final performance judgments using the release or profile builds.
 Sure thing. Let's group everything into a single table:
 
-### Practical tests
+## Practical tests
 
 Intense processing has about a 10-20% overhead, and in special isolate calls are massively ruined on debug.
 
